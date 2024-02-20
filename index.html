@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem laudantium nam aperiam fugit at eaque veritatis numquam reiciendis vel aliquid facere accusantium unde, sequi incidunt est repellat, aut excepturi quos?
+        <a href="https://code-crew.org">Code Crew Link</a> 
+    </p>
+    <a href="https://google.com">Google Link</a>
+    <a href="https://google.com">Another Link</a>
+    <style>
+        p {
+            color: blue;
+            background-color: antiquewhite;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <script>
+        // const paragraphs = document.querySelectorAll('a');
+        // alert(paragraphs[0].innerHTML);
+
+        // const anchor = document.querySelectorAll('a + a'); // next sibling selector
+        // alert(anchor[0].innerHTML);
+
+        // const anchor = document.querySelector('p a'); // child selector
+        // alert(anchor.innerHTML);
+
+        // const anchor = document.querySelector('p > a'); // descendant selector
+        // alert(anchor.innerHTML);
+
+        const anchor = document.querySelectorAll('p ~ a'); // subsequent selector
+        alert(anchor[0].innerHTML);
+        alert(anchor[1].innerHTML);
+        alert(anchor[2].innerHTML);
+    </script>
+</body>
+</html>
