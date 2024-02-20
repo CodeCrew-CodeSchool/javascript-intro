@@ -8,10 +8,12 @@
 <body>
     <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem laudantium nam aperiam fugit at eaque veritatis numquam reiciendis vel aliquid facere accusantium unde, sequi incidunt est repellat, aut excepturi quos?
-        <a href="https://code-crew.org">Code Crew Link</a> 
+        <a class="classDemo" href="https://code-crew.org">Code Crew Link</a> 
     </p>
-    <a href="https://google.com">Google Link</a>
-    <a href="https://google.com">Another Link</a>
+    <a class="classDemo" href="https://google.com">Google Link</a>
+    <a class="classDemo" href="https://google.com">Another Link</a>
+
+    <h1 id="demo">Demonstration of getElementById</h1>
     <style>
         p {
             color: blue;
@@ -32,10 +34,68 @@
         // const anchor = document.querySelector('p > a'); // descendant selector
         // alert(anchor.innerHTML);
 
-        const anchor = document.querySelectorAll('p ~ a'); // subsequent selector
-        alert(anchor[0].innerHTML);
-        alert(anchor[1].innerHTML);
-        alert(anchor[2].innerHTML);
+        // const anchor = document.querySelector('p ~ a'); // subsequent selector
+        // alert(anchor); //array of querySelectorAll returns [object NodeList]
+        // alert(anchor[1].innerHTML);
+        // alert(anchor[2].innerHTML);
+
+        // const anchor = document.querySelector('p ~ a + a'); // subsequent & next sibling selector
+        // alert(anchor.innerHTML); //returns "Another Link"
+
+        // alert(document.querySelector('#demo').nodeName);
+        // alert(document.getElementById('demo').innerHTML);
+
+        //alert(document.getElementsByClassName('classDemo'));
+        let array = document.getElementsByClassName('classDemo');
+        // alert(array.length);
+        // alert(array[0]);
+        // alert(array[1]);
+        // alert(array[2]);
+
+        array[0].style = "color: pink;";
+        array[2].style = "color: purple;";
+        //above JS code runs automatically when the script tag loads in
+        //window.onload fires when ALL HTML content has fully loaded
+        window.onload = function() {
+            //alert('alert');
+            array[0].style = "color: purple;";
+            array[2].style = "color: pink;";
+            let money = "confusion";
+            //burnPopcorn(money);
+            let studentName = 'Isabel';
+            //$doTheLab(studentName);
+            doTheLabP(studentName);
+            targetH1();
+        }
+
+        let variableName = 'a value';
+
+        function customAlert(alertText) { //example of an default alert function
+            alert(alertText);
+        }
+
+        function burnPopcorn(bag) {
+            alert(bag);
+        }
+
+        function doTheLab(student) {
+            alert(`${student} is doing their lab`);
+            alert('first line'
+            + 'second line');
+            alert(`this
+            is all
+            legal`) 
+        }
+        function doTheLabP(student) {
+            let p = document.getElementsByTagName('p');
+            p[0].innerHTML = `${student} is doing their lab`;
+        }
+
+        function targetH1() {
+            let h1 = document.getElementById('demo');
+            h1.style = "text-align: center";
+        }
+
     </script>
 </body>
 </html>
