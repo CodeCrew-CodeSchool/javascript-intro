@@ -55,7 +55,39 @@ Passcode: k3#9p=1v
 ## Wednesday
 
 Math
+
 .random
+
 .ceil
+
 .floor
+
 .round
+
+
+
+JavaScript Events
+
+addEventListener
+
+Event Object
+
+preventDefault()
+
+Named vs Anonymous functions
+
+Events demoed:
+
+click & dblclick
+
+mouseover & mouseout
+
+focus & blur
+
+keydown
+
+React / JSX syntax preview
+
+https://us02web.zoom.us/rec/share/ZFcmOdeH4O0pdjdZTIFJfQO9HMH5BguZfdoMKAsj5mZQfNXR95aSBTYFyzMEINHe.7gQrExyJ3DFMD9-j
+
+Passcode: *3y$dYQu
