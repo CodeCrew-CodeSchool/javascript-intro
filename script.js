@@ -7,6 +7,10 @@ window.onload = function() {
 
     const password = document.querySelector('input[type="password"]');
 
+    const form = document.querySelector("form");
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const para = document.querySelector("p");
     
     //functions
     function random(number) {
@@ -28,6 +32,18 @@ window.onload = function() {
     }
 
     //call functions aka execute aka run functions
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (fname.value === "" || lname.value === "") {
+          para.textContent = "You need to fill in both names!";
+        } else {
+            form.innerHTML = "";
+            para.style.color = "green";
+            para.textContent = "You have successfully submitted the form!"
+        }
+        
+      });
+
     password.addEventListener("focus", (event) => {
         event.target.style.background = "pink";
       });
