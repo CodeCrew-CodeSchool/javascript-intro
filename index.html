@@ -32,7 +32,13 @@
         </label>
     </form>
   
-    <button title="Change Background">Click</button>
+    <button title="Change Background" onfocus="
+        console.log(event);
+        console.log(event.target);
+        const rndCol = `rgb(7 4 106)`;
+        document.body.style = 'height: 100px; width: 100px;';
+        document.body.style.backgroundColor = rndCol;
+    ">Click</button>
     <button title="I also Change the Background">MouseOver</button>
     <input type="text" title="Type to Change the Color" placeholder="Type to Change the Color"/>
     <div></div>

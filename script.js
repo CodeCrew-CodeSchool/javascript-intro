@@ -67,3 +67,8 @@ window.onload = function() {
     document.body.style.backgroundColor = rndCol;
   }
 */
+// Assign a string value of "fadeOut" to the "className" 
+// property on the ninjaEmojiHTML variable
+
+// let ninjaEmojiHTML = document.getElementById('ninjaEmoji');
+// ninjaEmojiHTML.className = "fadeOut";
