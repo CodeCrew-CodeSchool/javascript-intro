@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Problem 1
+        Create a button
+        use the onclick attribute to write a message in the console
+     -->
+     <button onclick="console.log('Hey yall');">Greetings</button>
+     <!-- 
+        Problem 2
+        Create a button.
+        Inside a script element,
+        use addEventListener to give that button a function that 
+        outputs a new message to the console.
+      -->
+      <button id="btnmessage">Click Me </button>
+      <script>
+          var btn = document.querySelector('#btnmessage');
+
+        function buttonListener() {
+            console.log("this is a new message");
+        }
+        btn.addEventListener('click', buttonListener);
+
+      </script>
+      <!-- 
+        Problem 3....
+        Create a button
+        use the onclick attribute to write the button's innerHTML to the console
+       -->
+       
+       <!-- 
+        Problem 4....
+        Create a button
+        use the script tag to write javascript
+        In your code, create a variable to target the button
+        use the addEventListener function to set a function to fire on the click event
+        in the function, write the button's innerHTML to the console
+       -->
+
+
+
+
+    <!--draft 1
+         option 1: onclick
+    <button onclick="handleClick()">Click Me!</button>
+
+    <script>
+        console.log('this runs when the page loads');
+        
+        function handleClick() {
+            console.log('this runs when the handleClick function is called');
+            console.log(event.target.innerHTML);
+        }
+        //option 2: addEventListener
+        document.querySelector('button').addEventListener('click', handleClick);
+    </script> -->
+</body>
+</html>
