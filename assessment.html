@@ -33,16 +33,30 @@
         Create a button
         use the onclick attribute to write the button's innerHTML to the console
        -->
-       
+       <button onclick="console.log(event.target.innerHTML)">Ketchup</button>
        <!-- 
         Problem 4....
-        Create a button
-        use the script tag to write javascript
-        In your code, create a variable to target the button
-        use the addEventListener function to set a function to fire on the click event
-        in the function, write the button's innerHTML to the console
+        Create a button.
+        use the script tag to write javascript.
+        In your code, create a variable to target the button.
+        use the addEventListener function to set a function to fire on the click event.
+        in the function, write the button's innerHTML to the console.
        -->
-
+       <button id="p4">Mustard</button>
+       <script>
+        let yolk = document.querySelector('#p4');
+        yolk.addEventListener('click', function(){
+            console.log(event.target.innerHTML);
+        });
+       </script>
+       <!-- Problem X
+        make a script tag
+        make a variable and set it equalt to document.createElement('button');
+        set your variables innerHTML and 
+        use addEventListener to give it a function that will console.log
+        its innerHTML.
+        call the document.appendChild function and pass in your variable as parameter
+        -->
 
 
 
