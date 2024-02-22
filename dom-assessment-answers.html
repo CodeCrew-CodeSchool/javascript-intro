@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Answers</title>
 </head>
 <body>
     <!-- Problem 1
@@ -51,12 +51,22 @@
        </script>
        <!-- Problem X
         make a script tag
-        make a variable and set it equalt to document.createElement('button');
+        make a variable and set it equal to document.createElement('button');
         set your variables innerHTML and 
         use addEventListener to give it a function that will console.log
         its innerHTML.
-        call the document.appendChild function and pass in your variable as parameter
+        call the document.body.appendChild function and pass in your variable as parameter
         -->
+        <script>
+            let conner = document.createElement('button');
+            conner.innerHTML = 'Click Me!';
+            conner.addEventListener('click', function(){
+                console.log(event.target.innerHTML);
+            });
+            document.body.appendChild(conner);
+        </script>
+        <!-- Follow me on Github
+        https://www.Github.com/ConnerKT -->
 
 
 
