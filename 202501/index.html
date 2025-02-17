@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0px;
+                /*  */
+            }
+            @keyframes Slide {
+                from {
+                    left: 100%;
+                }
+                to {
+                    left: 0%;
+                }
+            }
+            #emoji {
+                position: absolute;
+                animation: Slide 2s infinite;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h1 id="emoji">
+            😃
+        </h1>
+
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore eos recusandae maiores nobis molestiae itaque, consectetur totam accusamus fuga laboriosam quam cum repudiandae doloremque quidem natus dolore assumenda culpa nihil.</p>
+            <button>Alert</button>
+            <ul>
+                <li class="giant">fe</li>
+                <li class="giant">fi</li>
+                <li class="giant">fo</li>
+                <li class="giant">fum</li>
+            </ul>
+        </div>
+        
+        <script>
+            console.log("Hello, Class");
+            console.log("My name is DJ"); // Say "My name is _____"
+            //variable creation
+            var light = "an example of a string"; //string 
+            let lite = -100;
+            /*
+            anything
+            in here
+            is not code
+            comments are notes for devs
+
+            */
+
+           document.querySelector('h1').innerHTML = "Hello, Cortez";
+           document.querySelector('#emoji').innerHTML = "Hello, Cortez";
+           
+           document.getElementById("emoji").innerHTML = "Hello, Cortez";
+
+           console.log(document.getElementsByClassName("giant"));
+
+           /*
+           Create Variables that hold the phrase "Hello, World" and "Hi my name is ____"
+           Use console.log() to print each variable to your console
+           */
+          let myname = "bruce";
+          console.log(myname); //correct
+
+            //   console.log(bruce); //incorrect
+
+          let myage = 99;
+            //   let newname;
+          console.log(myage); 
+            //   console.log("oops");
+            myage = myage - 50; //proper assignment to retain value
+            myage - 50; //value isn't assigned and not retained for future use
+            console.log(myage);
+            function myfunction() {
+                console.log("it just got deeper");
+                my2ndfunction("inception go brrrr");
+                return "legit math";
+            }
+            myfunction();
+
+            function my2ndfunction(variableName) {
+                console.log("it just got deeperer");
+                console.log(variableName);
+                
+            }
+        </script>
+    </body>
+</html>
