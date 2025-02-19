@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="a value!">RBG</button>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium, recusandae voluptates in maxime quo, dolorem exercitationem necessitatibus, corrupti rem repudiandae eum! Nobis officia, quo esse voluptas quae libero! Itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium, recusandae voluptates in maxime quo, dolorem exercitationem necessitatibus, corrupti rem repudiandae eum! Nobis officia, quo esse voluptas quae libero! Itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium, recusandae voluptates in maxime quo, dolorem exercitationem necessitatibus, corrupti rem repudiandae eum! Nobis officia, quo esse voluptas quae libero! Itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium, recusandae voluptates in maxime quo, dolorem exercitationem necessitatibus, corrupti rem repudiandae eum! Nobis officia, quo esse voluptas quae libero! Itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium, recusandae voluptates in maxime quo, dolorem exercitationem necessitatibus, corrupti rem repudiandae eum! Nobis officia, quo esse voluptas quae libero! Itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium, recusandae voluptates in maxime quo, dolorem exercitationem necessitatibus, corrupti rem repudiandae eum! Nobis officia, quo esse voluptas quae libero! Itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium, recusandae voluptates in maxime quo, dolorem exercitationem necessitatibus, corrupti rem repudiandae eum! Nobis officia, quo esse voluptas quae libero! Itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium, recusandae voluptates in maxime quo, dolorem exercitationem necessitatibus, corrupti rem repudiandae eum! Nobis officia, quo esse voluptas quae libero! Itaque.
+    </div>
+    <script>
+        /*
+        Math.floor - round your number down to X.0
+        Math.random - generate a random value between 0 and 1
+
+        */
+       let ourRandomNumber = Math.floor(Math.random() * 100 + 1);
+       document.write(ourRandomNumber);
+
+       document.body.onkeydown = function() {
+        console.log("i am anon");
+        controller.abort();
+       }
+
+       const btn = document.querySelector("button");
+
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+
+      function mycolorfunction(event) {
+        const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+        // const randomColor = "words " + ourRandomNumber;
+        // const randomColor2 = `words ${ourRandomNumber}`;
+        document.body.style.backgroundColor = rndCol;
+        //btn.removeEventListener("mouseout", mycolorfunction);
+        
+      }
+      const controller = new AbortController();
+
+       btn.addEventListener(
+        "mouseout", 
+        mycolorfunction,
+        { signal: controller.signal }
+       );
+
+       //scroll event
+
+       document.querySelector('div').addEventListener("scroll", () => {
+        console.log("scrollin scrollin scrollin");
+       });
+
+    </script>
+</body>
+</html>
