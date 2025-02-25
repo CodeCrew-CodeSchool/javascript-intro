@@ -63,6 +63,22 @@
 </style>
 
 <body>
+    <form>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsum adipisci reprehenderit obcaecati non quasi repudiandae quod itaque velit quaerat dolore ex eos et, nostrum harum, veniam libero. Incidunt, doloribus?</p>
+        <input placeholder="Pick a color" type="text"/>
+        <input value="Submit" type="submit" />
+    </form>
+    <script>
+        //Write some JavaScript that will open an alert box that greets the user when the form is submitted
+        document.querySelector('input[type="submit"]').addEventListener("click", (event)=>{
+            event.preventDefault();
+            document.body.style.backgroundColor = document.querySelector('input').value;
+        });
+        // document.querySelector('form').addEventListener("submit", (event)=>{
+        //     event.preventDefault();
+        //     alert(`hello ${document.querySelector('input').value}`);
+        // });
+    </script>
     <div id="navbar">
         <h1>😃</h1><h1>😃</h1><h1>😃</h1><h1>😃</h1>
         <h1 id="title">
